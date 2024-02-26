@@ -130,7 +130,7 @@ if not DEBUG:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    BASE_DIR / '/static/'
+    BASE_DIR / 'static/'
 ]
 
 # Default primary key field type

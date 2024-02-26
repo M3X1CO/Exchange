@@ -8,7 +8,11 @@ version 1.3
 
 version 1.4
 **Migrate database from sqlite3 to postgresql
+**middleman gunicorn, pysocpg2, database-url, django-environ, 
 **Launch the website!
+**convert os directories to unix format
+**Logging of python exections while live
+
 
 version 1.5
 Give a more detailed error message for creating an account for useability
