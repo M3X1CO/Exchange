@@ -61,7 +61,7 @@ def registerPage(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request, "An error occurred during registration")
+            messages.error(request, "Username exists try another.")
 
     context = {
         'form': form,
