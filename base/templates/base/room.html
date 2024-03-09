@@ -17,7 +17,7 @@
               ></path>
             </svg>
           </a>
-          <h3>Resolution</h3>
+          <h3>Response</h3>
         </div>
 
         {% if room.host == request.user or request.user.is_staff %}
@@ -88,10 +88,7 @@
               <div class="thread__top">
                 <div class="thread__author">
                   <a href="{% url 'user-profile' message.user.id %}" class="thread__authorInfo">
-                    <div class="avatar avatar--small">
-                      <img src="{% static 'images/avatar.svg' %}" />
-                    </div>
-                    <span>@{{message.user.username}}</span>
+                    <span>Response</span>
                   </a>
                   <span class="thread__date">{{message.created|timesince}} ago</span>
                 </div>
@@ -119,14 +116,14 @@
       <div class="room__message">
         <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input name="body" placeholder="Write your message here..." /></form>
+        <input name="body" placeholder="Write your prompt here..." /></form>
       </div>
     </div>
     <!-- Room End -->
 
     <!--   Start -->
     <div class="participants">
-      <h3 class="participants__top">Participants <span>({{participants.count}})</span></h3>
+      <h3 class="participants__top">Editors <span>({{participants.count}})</span></h3>
       <div class="participants__list scroll">
         {% for user in participants %}
         <a href="{% url 'user-profile' user.id %}" class="participant">
