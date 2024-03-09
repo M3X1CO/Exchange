@@ -198,15 +198,7 @@ a {
   right: 3.5px;
 }
 
-.scroll::-webkit-scrollbar {
-  width: 0.6rem;
-  background-color: rgb(41, 41, 46);
-}
 
-.scroll::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background-color: var(--color-gray);
-}
 
 .dropdown-menu {
   z-index: 111;
@@ -1162,4 +1154,33 @@ a {
   font-weight: 500;
   color: var(--color-main);
   font-weight: 1.4rem;
+}
+
+.activitiesOverflow {
+  display: block;
+  height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: rgb(41, 41, 46);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(41, 41, 46);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--color-gray);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
