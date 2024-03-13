@@ -18,6 +18,11 @@ version 1.4
 **Change all security variables in .env like STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') to read correctly from .env on host server
 **Renamed application from client_practice to mysite as all package libraries function properly with default name mysite instead of rooting out all the locations of mysite.
 **Render.com start application language updated python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
+**Launch website successfull!
+
+**Error handling /opt/render/project/src/.venv/lib/python3.11/site-packages/django/http/response.py:517: Warning: StreamingHttpResponse must consume synchronous iterators in order to serve them asynchronously. Use an asynchronous iterator instead.
+  warnings.warn(
+**q = request.GET.get('q') if request.GET.get('q') != None else '' changed to q = request.GET.get('q') if request.GET.get('q') is not None else ''
 
 
 
