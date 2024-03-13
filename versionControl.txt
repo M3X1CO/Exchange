@@ -7,11 +7,18 @@ version 1.3
 **Update the name to the group project 
 
 version 1.4
-**Migrate database from sqlite3 to postgresql
-**middleman gunicorn, pysocpg2, database-url, django-environ, 
-**Launch the website!
+**Create Environment variables DATABASE_URL, GEMINI_SET_KEY, PYTHON_VERSION, SECRET_DJANGO_KEY, WEB_CONCURRENCY on Render.com for security. This creates server side variable that can be cross referenced to protect against attacks.
+**Migrate database from sqlite3 to postgresql and create a standalone database on Render.com
+**middleman software packages installed to transfer data from python/django to Render.com gunicorn, pysocpg2, database-url, django-environ, 
+**Launch the website! -- fail miserably...
+**Create a requirements.txt to load requirements to the hosted server on Render.com
+**Create a build.sh script to automate the launching of the website on the server, exits on error, installs -requirements.txt if in home directory, migrates the manage.py database if needed, collects static files used by the website in manage.py
 **convert os directories to unix format
-**Logging of python exections while live
+**Import environ, from dotenv import load_dotenv, load_dotenv(), env = environ.Env(), environ.Env.read_env()... to read environment variables from the hosted server on Render.com
+**Change all security variables in .env like STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') to read correctly from .env on host server
+**Renamed application from client_practice to mysite as all package libraries function properly with default name mysite instead of rooting out all the locations of mysite.
+**Render.com start application language updated python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
+
 
 
 version 1.5
