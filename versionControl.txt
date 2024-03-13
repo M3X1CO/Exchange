@@ -31,7 +31,7 @@ version 1.4
 version 1.5
 Give a more detailed error message for creating an account for useability
 
-Provide password requirements on the login page.
+Remove password requirements on the login page.
 
 https://github.com/M3X1CO/Portfolio.git
 
