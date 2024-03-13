@@ -30,6 +30,7 @@ version 1.5
 **Give a more detailed error message for creating an account for useability
 **Updated favicon.ico to work correctly
 **Remove password requirements on the login page.
+**Removed old build code from the production site
 
 https://github.com/M3X1CO/Portfolio.git
 
