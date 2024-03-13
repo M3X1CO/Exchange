@@ -20,9 +20,7 @@ version 1.4
 **Render.com start application language updated python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
 **Launch website successfull!
 
-**Error handling /opt/render/project/src/.venv/lib/python3.11/site-packages/django/http/response.py:517: Warning: StreamingHttpResponse must consume synchronous iterators in order to serve them asynchronously. Use an asynchronous iterator instead.
-  warnings.warn(
-**q = request.GET.get('q') if request.GET.get('q') != None else '' changed to q = request.GET.get('q') if request.GET.get('q') is not None else ''
+**Error handling **q = request.GET.get('q') if request.GET.get('q') != None else '' changed to q = request.GET.get('q') if request.GET.get('q') is not None else ''
 
 **Replace outdated favicon.ico's with new <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="ico image"> from <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 
