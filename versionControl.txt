@@ -24,6 +24,8 @@ version 1.4
   warnings.warn(
 **q = request.GET.get('q') if request.GET.get('q') != None else '' changed to q = request.GET.get('q') if request.GET.get('q') is not None else ''
 
+**Replace outdated favicon.ico's with new <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="ico image"> from <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
 
 
 version 1.5
