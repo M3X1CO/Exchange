@@ -18,12 +18,13 @@
         </div>
       </div>
       <div class="layout__body">
-        <form class="form" action="" method="POST">
+  
+        <form class="form" action="" method="POST" onsubmit="loadingScreen()">
           {% csrf_token %}
 
           <div class="form__group">
             <label for="room_topic">Sender's Email</label>
-            <input required type="text" value="{{room.topic.name}}"  name="topic" list="topic-list" />
+            <input required type="text" value="{{room.topic.name}}" name="topic" list="topic-list" />
             <datalist id="topic-list">
               <select id="room_topic">
                 {% for topic in topics %}
@@ -41,10 +42,16 @@
             <label for="room_description">Email's Description</label>
             {{form.description}}
           </div>
-
           <div class="form__action">
-            <a class="btn btn--dark" href="{% url 'home' %}">Cancel</a>
-            <button class="btn btn--main" type="submit">Generate</button>
+            <a class="btn btn--dark" href="{% url 'home' %}"  id="Loading" >Cancel</a>
+            <button class="btn btn--main" type="submit"  id="Loading2" >Generate</button>
+          </div>
+          <div id="loader" style="justify-content: center; align-items: center; display: flex;">
+              <div style="display:none; width: 70%; margin: 0%; align-items: center; flex-direction: column;" id="myDiv" class="animate-bottom">
+                <h2 style ="display: flex; justify-content: center; align-items: center">
+                  Generating Please Wait...
+                  <a class="btn btn--dark" href=""  id="myDiv2" style="width: 0; opacity: 0; padding-left: 0;  padding-right: 0;" disabled>.</a></h2>
+              </div>
           </div>
         </form>
       </div>
