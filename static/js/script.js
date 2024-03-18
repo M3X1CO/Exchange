@@ -67,3 +67,16 @@ if (photoInput)
 // Scroll to Bottom
 const conversationThread = document.querySelector(".room__box");
 if (conversationThread) conversationThread.scrollTop = conversationThread.scrollHeight;
+
+var myVar;
+
+function loadingScreen() {
+  document.getElementById("Loading").style.display = "none";
+  document.getElementById("Loading2").style.display = "none";
+  myVar = setTimeout(MyLoadingScreen, 0);
+}
+
+function MyLoadingScreen() {
+  document.getElementById("myDiv").style.display = "block";
+  document.getElementById("myDiv2").style.display = "none";
+}
