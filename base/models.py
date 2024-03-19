@@ -24,7 +24,7 @@ class Room(models.Model):
         return reverse('room', args=[str(self.id)])
 
     class Meta:
-        ordering = ['-updated', '-created']
+        ordering = ['updated', 'created']
 
     def __str__(self):
         return self.name
