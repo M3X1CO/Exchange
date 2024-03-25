@@ -84,11 +84,11 @@
         <div class="room__conversation">
           <div class="threads scroll">
             {% for message in room_messages %}
-            <div class="thread">
+            <div class="thread" {% if forloop.first %} style = "background-color: rgba(255, 255, 255, 0.1)"{% endif %}>
               <div class="thread__top">
                 <div class="thread__author">
                   <a href="{% url 'user-profile' message.user.id %}" class="thread__authorInfo">
-                    <span>Response</span>
+                    <span>{% if forloop.first %}Latest{% endif %} Response</span>
                   </a>
                   <span class="thread__date">{{message.created|timesince}} ago</span>
                 </div>
@@ -116,7 +116,12 @@
       <div class="room__message">
         <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <input name="body" placeholder="Write your prompt here..." /></form>
+        <div class="form__action">
+          <button class="btn btn--main" type="submit" style="position: fixed; z-index: 100; resize: none;border: none; outline: none;
+            border-radius: 0.7rem; height: 4.5rem; width: 8rem; margin-top: -1rem; padding: 1.2rem; justify-content: center; font-size: 1.4rem; font-weight: 500;">Reply</button>
+        </div>
+        <input name="body" placeholder="Write your prompt here..." required/>
+      </form>
       </div>
     </div>
     <!-- Room End -->
