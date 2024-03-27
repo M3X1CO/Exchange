@@ -84,11 +84,11 @@
         <div class="room__conversation">
           <div class="threads scroll">
             {% for message in room_messages %}
-            <div class="thread" {% if forloop.first %} style = "background-color: rgba(255, 255, 255, 0.1)"{% endif %}>
+            <div class="thread" {% if forloop.last %} style = "background-color: rgba(255, 255, 255, 0.1)"{% endif %}>
               <div class="thread__top">
                 <div class="thread__author">
                   <a href="{% url 'user-profile' message.user.id %}" class="thread__authorInfo">
-                    <span>{% if forloop.first %}Latest{% endif %} Response</span>
+                    <span>{% if forloop.last %}Latest{% endif %} Response</span>
                   </a>
                   <span class="thread__date">{{message.created|timesince}} ago</span>
                 </div>
